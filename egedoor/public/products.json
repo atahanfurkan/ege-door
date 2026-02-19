@@ -1,0 +1,14 @@
+[
+  { "id": 1, "name": "Vip Antrasit Çelik Kapı", "category": "celik", "image": "/celik1.jpg", "description": "7 noktadan kilit sistemli, ultra güvenlikli seri." },
+  { "id": 2, "name": "Modern Beyaz Lake", "category": "lake", "image": "/celik2.jpg", "description": "İpek mat lake boya, minimalist tasarım." },
+  { "id": 3, "name": "Rustik Meşe Laminat", "category": "laminat", "image": "/celik3.jpg", "description": "Çizilmelere karşı dayanıklı doğal doku." },
+  { "id": 4, "name": "Antik Membran Beyaz", "category": "membran", "image": "/celik1.jpg", "description": "Pvc kaplama teknolojisi ile uzun ömürlü kullanım." },
+  { "id": 5, "name": "Elite Gri Melamin", "category": "melamin", "image": "/celik2.jpg", "description": "Ekonomik ve şık ofis tipi çözüm." },
+  { "id": 6, "name": "Safir Ceviz Çelik", "category": "celik", "image": "/celik3.jpg", "description": "Ahşap görünümlü, dış etkenlere dayanıklı çelik kapı." },
+  { "id": 7, "name": "Country Lake Panel", "category": "lake", "image": "/celik1.jpg", "description": "Geleneksel çizgilerle modern lake işçiliği." },
+  { "id": 8, "name": "Beton Desenli Laminat", "category": "laminat", "image": "/celik2.jpg", "description": "Endüstriyel tasarım sevenler için özel doku." },
+  { "id": 9, "name": "Klasik Mebran Ceviz", "category": "membran", "image": "/celik3.jpg", "description": "Vakum pres teknolojisi ile hatasız kaplama." },
+  { "id": 10, "name": "Trend Antrasit Melamin", "category": "melamin", "image": "/celik1.jpg", "description": "Yeni nesil yüzey tasarımı, kolay temizlik." },
+  { "id": 11, "name": "Zırhlı Black Çelik", "category": "celik", "image": "/celik2.jpg", "description": "Maksimum koruma, sessiz kapanma özelliği." },
+  { "id": 12, "name": "Sürme Lake Camlı", "category": "lake", "image": "/celik3.jpg", "description": "Dar alanlar için estetik ve camlı sürme kapı." }
+]
