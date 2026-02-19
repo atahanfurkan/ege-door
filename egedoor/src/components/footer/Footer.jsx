@@ -63,13 +63,13 @@ const Footer = () => {
           <div className="footer-col contact-col">
             <h4>İLETİŞİM</h4>
             <div className="f-contact-item">
-              <span>T:</span> <a href="tel:+902320000000">+90 (232) 000 00 00</a>
+              <span>Telefon:</span> <a href="tel:+902320000000">+90 (232) 000 00 00</a>
             </div>
             <div className="f-contact-item">
-              <span>M:</span> <a href="mailto:info@egedoor.com">info@egedoor.com</a>
+              <span>Mail:</span> <a href="mailto:info@egedoor.com">info@egedoor.com</a>
             </div>
             <div className="f-contact-item">
-              <span>A:</span> <p>Karabağlar Mobilyacılar Bölgesi, İzmir</p>
+              <span>Adres:</span> <p>Karabağlar Mobilyacılar Bölgesi, İzmir</p>
             </div>
           </div>
 
