@@ -1,4 +1,6 @@
-/* About.css */
+/* ==========================================================================
+   EGE DOOR - ABOUT SECTION (RESPONSIVE MASTER)
+   ========================================================================== */
 
 .about-section {
   padding: 120px 0;
@@ -48,7 +50,7 @@
   align-items: center;
 }
 
-/* Sol Görsel */
+/* Sol Görsel Alanı */
 .about-image-side {
   position: relative;
 }
@@ -56,7 +58,7 @@
 .about-image-side img {
   width: 100%;
   border-radius: 4px;
-  box-shadow: 25px 25px 0px rgba(192, 57, 43, 0.05); /* Şık bir dekoratif kutu */
+  box-shadow: 25px 25px 0px rgba(192, 57, 43, 0.05);
 }
 
 .image-overlay-card {
@@ -73,18 +75,20 @@
 }
 
 .image-overlay-card span {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 900;
   display: block;
+  line-height: 1;
 }
 
 .image-overlay-card p {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 1px;
+  margin-top: 5px;
 }
 
-/* Sağ Metin */
+/* Sağ Metin Alanı */
 .about-text-side h3 {
   font-size: 2.2rem;
   line-height: 1.2;
@@ -103,11 +107,7 @@
   margin-bottom: 40px;
 }
 
-/* Özellikler Listesi */
-.features-list {
-  margin-bottom: 40px;
-}
-
+/* Özellikler */
 .feature-item {
   display: flex;
   align-items: center;
@@ -127,58 +127,82 @@
   color: #333;
 }
 
-/* Katalog Alanı */
 .about-katalog-box {
   background: #f8f8f8;
   padding: 30px;
   border-radius: 4px;
+  margin-top: 30px;
 }
-
-.btn-katalog {
-  display: inline-block;
-  margin-top: 15px;
-  font-weight: 800;
-  color: var(--primary-red);
-  text-decoration: none;
-  letter-spacing: 1px;
-  transition: 0.3s;
-}
-
-.btn-katalog:hover {
-  letter-spacing: 2px;
-}
-
-/* Responsive */
-@media (max-width: 1100px) {
-  .about-content-grid {
-    grid-template-columns: 1fr;
-    gap: 60px;
-  }
-  .about-image-side {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  .image-overlay-card {
-    right: 20px;
-  }
-}
-
-/* About.css */
 
 .katalog-info p {
-  color: #000000; /* Yazıyı tam siyah yapar */
-  font-weight: 600; /* Biraz daha belirgin olması için kalınlık ekledik */
-  margin-bottom: 5px;
+  color: #000000;
+  font-weight: 600;
   font-size: 1rem;
+  margin-bottom: 5px;
 }
 
-/* Eğer linkin (DİJİTAL KATALOG) rengiyle karışmasın istersen 
-   butonun stilini de kontrol edebilirsin */
 .btn-katalog {
   display: inline-block;
   margin-top: 10px;
   font-weight: 800;
-  color: var(--primary-red); /* Buton kırmızı kalmaya devam eder */
+  color: var(--primary-red);
   text-decoration: none;
   transition: 0.3s;
+}
+
+.btn-katalog:hover {
+  letter-spacing: 1px;
+}
+
+/* ==========================================
+   RESPONSIVE DOKUNUŞLAR
+   ========================================== */
+
+@media (max-width: 1200px) {
+  .about-content-grid {
+    gap: 50px;
+  }
+  .section-title-area h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .about-section {
+    padding: 80px 0;
+  }
+  .about-content-grid {
+    grid-template-columns: 1fr; /* Üst üste biner */
+    text-align: center;
+  }
+  .about-image-side {
+    max-width: 550px;
+    margin: 0 auto 50px;
+  }
+  .feature-item {
+    justify-content: center;
+  }
+  .image-overlay-card {
+    right: 0;
+    bottom: -20px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-title-area h2 {
+    font-size: 2rem;
+  }
+  .about-text-side h3 {
+    font-size: 1.6rem;
+  }
+  .about-image-side img {
+    box-shadow: 15px 15px 0px rgba(192, 57, 43, 0.05);
+  }
+  .image-overlay-card span {
+    font-size: 1.8rem;
+  }
+  .main-p {
+    font-size: 1rem;
+  }
 }

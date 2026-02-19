@@ -1,15 +1,18 @@
-/* Giris.css */
+/* ==========================================================================
+   EGE DOOR - GİRİŞ & HERO SECTION (MASTER RESPONSIVE)
+   ========================================================================== */
 
 .page-wrapper {
   width: 100%;
-  margin-top: 120px; /* Navbar'ın altına itiyoruz */
+  margin-top: 100px; /* Masaüstü için ideal boşluk */
+  transition: margin-top 0.4s ease;
 }
 
 /* HERO SLIDER */
 .hero-slider {
   position: relative;
   width: 100%;
-  height: 75vh;
+  height: 75vh; /* Masaüstü yüksekliği */
   background: #000;
   overflow: hidden;
 }
@@ -25,12 +28,21 @@
   z-index: 1;
 }
 
+/* Resmin üzerine hafif bir karartma ekleyerek yazının okunmasını garantiler */
+.slide::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
 .slide.active { opacity: 1; }
 
 .hero-overlay-text {
   position: absolute;
   z-index: 5;
   width: 100%;
+  padding: 0 5%;
   text-align: center;
   top: 50%;
   transform: translateY(-50%);
@@ -38,10 +50,12 @@
 }
 
 .hero-overlay-text h1 {
-  font-size: clamp(3rem, 7vw, 5rem);
+  /* Clamp sayesinde font boyutu ekrana göre kendi ayarlar */
+  font-size: clamp(2.2rem, 8vw, 5rem); 
   font-weight: 900;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   text-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  line-height: 1.1;
 }
 
 /* INFO SECTION (NEDEN BİZ) */
@@ -51,7 +65,7 @@
 }
 
 .info-container {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   display: flex;
   gap: 60px;
@@ -68,10 +82,11 @@
   letter-spacing: 2px;
   display: block;
   margin-bottom: 15px;
+  text-transform: uppercase;
 }
 
 .text-content h2 {
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   color: #1a1a1a;
   margin-bottom: 25px;
   line-height: 1.2;
@@ -81,54 +96,106 @@
   color: #555;
   line-height: 1.8;
   margin-bottom: 20px;
+  font-size: 1.05rem;
 }
 
 .quote-box {
   border-left: 4px solid var(--primary-red);
   padding-left: 20px;
   font-style: italic;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: #333;
   margin-top: 30px;
 }
 
 /* KATALOG KARTI */
-.katalog-box { flex: 1; }
+.katalog-box { flex: 1; width: 100%; }
 
 .katalog-inner {
   background: #111;
   color: white;
-  padding: 50px 40px;
-  border-radius: 14px;
+  padding: 60px 40px;
+  border-radius: 20px;
   text-align: center;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  border: 1px solid rgba(255,255,255,0.05);
 }
 
 .katalog-inner h3 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: var(--primary-red);
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  font-weight: 800;
 }
 
 .download-btn {
   display: inline-block;
   background: var(--primary-red);
   color: white;
-  padding: 14px 30px;
+  padding: 16px 35px;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 800;
+  border-radius: 50px; /* Daha modern yuvarlak buton */
   margin-top: 25px;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
 }
 
 .download-btn:hover {
   background: white;
   color: var(--primary-red);
+  transform: translateY(-3px);
 }
 
-/* RESPONSIVE */
+/* ==========================================
+   RESPONSIVE DOKUNUŞLAR
+   ========================================== */
+
+@media (max-width: 1024px) {
+  .info-container {
+    gap: 40px;
+  }
+  .text-content h2 {
+    font-size: 2.2rem;
+  }
+}
+
 @media (max-width: 968px) {
-  .info-container { flex-direction: column; text-align: center; }
-  .quote-box { border-left: none; border-top: 2px solid var(--primary-red); padding-top: 20px; }
-  .page-wrapper { margin-top: 90px; }
+  .page-wrapper { margin-top: 80px; }
+  
+  .hero-slider { height: 60vh; } /* Mobilde çok devasa olmasın */
+
+  .info-container { 
+    flex-direction: column; 
+    text-align: center; 
+    padding: 0 8%;
+  }
+
+  .text-content { order: 1; } /* Yazı üstte kalsın */
+  .katalog-box { order: 2; margin-top: 40px; } /* Kart alta insin */
+
+  .quote-box { 
+    border-left: none; 
+    border-top: 2px solid var(--primary-red); 
+    padding: 25px 0 0 0; 
+    margin: 30px auto 0;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-slider { height: 50vh; }
+  
+  .text-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .katalog-inner {
+    padding: 40px 20px;
+  }
+
+  .hero-overlay-text h1 {
+    letter-spacing: 1px;
+    font-size: 2rem;
+  }
 }
